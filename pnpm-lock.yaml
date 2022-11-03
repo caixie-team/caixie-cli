@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@caixiejs/cli': ^0.1.0
   '@types/prompts': ^2.4.1
   bumpp: ^8.2.1
   commander: ^9.4.1
@@ -24,6 +25,7 @@ dependencies:
   prompts: 2.4.2
 
 devDependencies:
+  '@caixiejs/cli': 0.1.0
   '@types/prompts': 2.4.1
   bumpp: 8.2.1
   eslint: 8.26.0
@@ -35,6 +37,17 @@ devDependencies:
   zx: 7.1.1
 
 packages:
+
+  /@caixiejs/cli/0.1.0:
+    resolution: {integrity: sha512-LnrH8glGJ168QYSGeGTnYxOPIUX59LbIQXliZD60qKkUvz9Ib0UMQNTr5XXSptiy0+WWVQkxlndTEMXWNm3bZA==}
+    hasBin: true
+    dependencies:
+      commander: 9.4.1
+      execa: 5.1.1
+      kolorist: 1.6.0
+      minimist: 1.2.7
+      prompts: 2.4.2
+    dev: true
 
   /@esbuild-kit/cjs-loader/2.4.0:
     resolution: {integrity: sha512-DBBCiHPgL2B/elUpvCDhNHXnlZQ9sfO2uyt1OJyAXKT41beQEFY4OxZ6gwS+ZesRCbZ6JV8M7GEyOPkjv8kdIw==}
@@ -1748,7 +1761,6 @@ packages:
 
   /kolorist/1.6.0:
     resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
-    dev: false
 
   /latest-version/7.0.0:
     resolution: {integrity: sha512-KvNT4XqAMzdcL6ka6Tl3i2lYeFDgXNCuIX+xNx6ZMVR1dFq+idXd9FLKNMOIx0t9mJ9/HudyX4oZWXZQ0UJHeg==}
