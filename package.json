@@ -1,0 +1,58 @@
+{
+  "name": "@caixiejs/cli",
+  "version": "0.1.0",
+  "description": "Caixie's command lint tools",
+  "author": {
+    "name": "Baisheng",
+    "email": "baisheng@gmail.com",
+    "url": "https://github.com/baisheng"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/caixie-team/caixie-cli",
+  "repository": {
+    "url": "https://github.com/caixie-team/caixie-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caixie-team/caixie-cli/issues"
+  },
+  "bin": {
+    "caixie": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsup",
+    "cleanup": "rm -rf ./node_modules ./**/node_modules ./dist ./**/dist ./pnpm-lock.yaml ./**/pnpm-lock.yaml",
+    "commit": "caixie git-commit",
+    "esno": "esno",
+    "lint": "eslint . --fix",
+    "update-pkg": "ncu --deep -u",
+    "update-version": "bumpp package.json",
+    "publish-pkg": "pnpm -r publish --access public",
+    "release": "pnpm update-version && pnpm publish-pkg",
+    "sync-pkg": "esno ./scripts/sync.ts",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "execa": "6.1.0",
+    "kolorist": "^1.6.0",
+    "minimist": "^1.2.7",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.1",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.26.0",
+    "esno": "^0.16.3",
+    "husky": "^8.0.1",
+    "npm-check-updates": "^16.3.16",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4",
+    "zx": "^7.1.1"
+  }
+}
